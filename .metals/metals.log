@@ -1,0 +1,9 @@
+2023.12.08 17:34:44 INFO  Started: Metals version 1.1.0 in folders '/Users/lcsaszar/Documents/Signal_Sages' for client Visual Studio Code 1.85.0.
+2023.12.08 17:34:45 WARN  no build tool detected in workspace '/Users/lcsaszar/Documents/Signal_Sages'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.12.08 17:34:45 WARN  Build server is not auto-connectable.
+Dec 08, 2023 5:35:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 08, 2023 5:35:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 08, 2023 5:35:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
