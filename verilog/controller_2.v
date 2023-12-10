@@ -29,6 +29,26 @@ module controller_2(
     and(e, L, C, nq1, q3);//A5
     and(F, nq1, q2);      //A6
     and(g, q1, nq3);      //A7 
+    or(d2,d,e,f,g);       //or2
+    and(h, ~R, nq1, nq2); //A8
+    and(i, ~S, q2, q3);   //A9
+    and(k, ~C, q2, nq3);  //A11
+    and(L, nq1, nq2, q3); //A12
+    and(m. nq1, q2, nq3); //A13
+    xor(d3, h,i,j,k,l,m); //XOR
+    d_ff M1(d1, clk, CLR, q1);
+    d_ff M2(d2, clk, CLR, q2);
+    d_ff M3(d3, clk, CLR, q3);
+    or(NR, q1, nq3);      //or3
+    and(NG, q1, nq2, nq1);//A18
+    and(NY, q1, q2, nq1); //A19
+    and(EG, q1, q2, qn3); //A20
+    and(EY, q1, q2, q3);  //A21
 
+    and(n, ~R, nq3, nq1); //A14
+    and(o, ~C, C, NG);    //A15
+    and(p, ~C, EG);       //A16
+    and(q, L, EG);        //A17
+    or(IC, n,o,p,q);      //or4
 
 endmodule
