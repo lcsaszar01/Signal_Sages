@@ -1,10 +1,6 @@
 #major credit is due to this githubber for creating the outline for this lifesaver of a file https://github.com/martinohanlon/flightlight/issues/1
 
 #created files
-/fasta_files
-/graph_images
-/kmers
-/dict
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -77,3 +73,6 @@ target/
 .metals/metals.lock.db
 .metals/metals.log
 .metals/metals.mv.db
+
+#DS_Store
+.DS_Store
