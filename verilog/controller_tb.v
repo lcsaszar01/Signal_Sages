@@ -6,8 +6,7 @@ module t_DUTB_controller();
 	wire en_s;
 	
 	
-	UUT_controller 
-(clk, not_r, c_and_l, l_or_notc, en_s)
+	UUT_controller (clk, not_r, c_and_l, l_or_notc, en_s)
 
 	initial begin
 	 #40 $finish;
