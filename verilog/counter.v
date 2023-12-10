@@ -1,6 +1,6 @@
-#Signal Sages Final Project Verilog Code
-#Authors: Dan Schrage, Kate Mealey, Phyona Schrader, Lydia Csaszar
-# counter.v
+//Signal Sages Final Project Verilog Code
+//Authors: Dan Schrage, Kate Mealey, Phyona Schrader, Lydia Csaszar
+//counter.v
 
 `include "jk_ff.v"
 
