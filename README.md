@@ -10,4 +10,8 @@ Prof. Matthew Morrison
 
 Notre Dame
 
-### Project:
+### Project: Traffic Light Controller
+
+|----|
+| Kogge, P. M. (2022). The Zen of Exotic Computing. United States: Society for Industrial and Applied Mathematics.|
+| Ndjountche, T. (2016). Digital Electronics 3: Finite-state Machines. United Kingdom: Wiley.|
