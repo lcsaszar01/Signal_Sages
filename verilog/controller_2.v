@@ -16,7 +16,7 @@ module controller_2(
     output NY,
     output ER,
     output EG,
-    output ER); 
+    output EY); 
 
     wires a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,q1,q2,q3,nq1,nq2,nq3,d1,d2,d3;
 
