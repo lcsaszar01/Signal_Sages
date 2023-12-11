@@ -4,21 +4,21 @@
 
 module counter(
 	input clk,
-	input en,
+	input in_EN,
 	input clr,
 	output rcos,
 	output rcol);
 
-	wire Q1, Q2, Q3, Q4, t1, t2;
+	wire qQ1, qQ2, qQ3, qQ4, t1, t2;
 
-	jk_ff M1 (Q1, QN, clk, clr, EN);
-	and(t1, Q1, EN);
-	jk_ff M2 (Q2, QN, clk, clr, t1);
-	and(t2, Q2, t1);
-	jk_ff M3 (Q3, QN, clk, clr, t2);
-	and(rcos, Q3, t2);
-	jk_ff M4 (Q4, QN, clk, clr, rcos);
-	and(rcol, Q4, rcos);
+	jk_ff jk1(in_EN, in_EN, clk, clr, qQ1);
+	and a1(t1, in_EN, qQ1);
+	jk_ff jk2(t1, t1, clk, clr, qQ2);
+	and a2(t2, t1, qQ2);
+	jk_ff jk3(t2, t2, clk, clr, qQ3);
+	and a3(rcos, t2, qQ3);
+	jk_ff jk4(rcos, rcos, clk, clr, qQ4);
+	and a4(rcol, rcos, qQ4);
 
 
 endmodule

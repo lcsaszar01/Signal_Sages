@@ -1,0 +1,5 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(11Dec2023:17:51:49):( irun -timescale 1ps/1ps final_path.v final_tb.v )

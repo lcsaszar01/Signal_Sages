@@ -18,13 +18,13 @@ module final_datapath (
 	input en_EY,
 	input [1:0]s_IC,
 	input en_IC,
-	output reg NR,
-	output reg NG,
-	output reg NY,
-	output reg ER,
-	output reg EG,
-	output reg EY,
-	output reg IC,
+	output reg out_NR,
+	output reg out_NG,
+	output reg out_NY,
+	output reg out_ER,
+	output reg out_EG,
+	output reg out_EY,
+	output reg out_IC,
 	output not_r,
 	output c_and_l,
 	output en_s,
@@ -34,49 +34,49 @@ module final_datapath (
 	always @(posedge clk)
 		if (en_NR)
 			if (s_NR == 0)
-				NR <= 0;
+				out_NR <= 0;
 			else if (s_NR == 1)
-				NR <= 1;
+				out_NR <= 1;
 	always @(posedge clk)
 		if (en_NG)
 			if (s_NG == 0)
-				NG <= 0;
+				out_NG <= 0;
 			else if (s_NG == 1)
-				NG <= 1;
+				out_NG <= 1;
 	always @(posedge clk)
 		if (en_NY)
 			if (s_NY == 0)
-				NY <= 0;
+				out_NY <= 0;
 			else if (s_NY == 1)
-				NY <= 1;
+				out_NY <= 1;
 	always @(posedge clk)
 		if (en_ER)
 			if (s_ER == 0)
-				ER <= 0;
+				out_ER <= 0;
 			else if (s_ER == 1)
-				ER <= 1;
+				out_ER <= 1;
 	always @(posedge clk)
 		if (en_EG)
 			if (s_EG == 0)
-				EG <= 0;
+				out_EG <= 0;
 			else if (s_EG == 1)
-				EG <= 1;
+				out_EG <= 1;
 	always @(posedge clk)
 		if (en_EY)
 			if (s_EY == 0)
-				EY <= 0;
+				out_EY <= 0;
 			else if (s_EY == 1)
-				EY <= 1;
+				out_EY <= 1;
 	always @(posedge clk)
-		if (en_IC)  //Inverse everything because that is the input to counter.v
+		if (en_IC)  //Inverse everything because that is the input to counter.
 			if (s_IC == 2'b00)
-				IC <= 1;
+				out_IC <= 1;
 			else if (s_IC == 2'b01)
-				IC <= R;
+				out_IC <= R;
 			else if (s_IC == 2'b10)
-				IC <= ~(L & C);
+				out_IC <= ~(L & C);
 			else if (s_IC == 2'b11)
-				IC <= ~(L + ~C);
+				out_IC <= ~(L + ~C);
 
 	assign not_r = ~R;
 	assign c_and_l = C & L;
