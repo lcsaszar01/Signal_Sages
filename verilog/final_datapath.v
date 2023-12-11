@@ -1,7 +1,3 @@
-#Signal Sages Final Project Verilog Code
-#Authors: Dan Schrage, Kate Mealey, Phyona Schrader, Lydia Csaszar
-#final_datapath.v
-
 module final_datapath (
 	input R,
 	input C,
@@ -72,15 +68,15 @@ module final_datapath (
 			else if (s_EY == 1)
 				EY <= 1;
 	always @(posedge clk)
-		if (en_IC)
+		if (en_IC)  //Inverse everything because that is the input to counter.v
 			if (s_IC == 2'b00)
-				IC <= 0;
+				IC <= 1;
 			else if (s_IC == 2'b01)
-				IC <= ~R;
+				IC <= R;
 			else if (s_IC == 2'b10)
-				IC <= L & C;
+				IC <= ~(L & C);
 			else if (s_IC == 2'b11)
-				IC <= L + ~C;
+				IC <= ~(L + ~C);
 
 	assign not_r = ~R;
 	assign c_and_l = C & L;

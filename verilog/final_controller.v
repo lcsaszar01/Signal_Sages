@@ -1,7 +1,3 @@
-#Signal Sages Final Project Verilog Code
-#Authors: Dan Schrage, Kate Mealey, Phyona Schrader, Lydia Csaszar
-#final_controller.v
-
 module final_controller(
 		input clk,
 		input not_r,
@@ -177,5 +173,5 @@ module final_controller(
 			end
 		endcase
 	end
-	
+
 endmodule

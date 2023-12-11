@@ -1,20 +1,14 @@
-#Signal Sages Final Project Verilog Code
-#Authors: Dan Schrage, Kate Mealey, Phyona Schrader, Lydia Csaszar
-#final.v
-
 module final (
 	input clk,
 	input R,
 	input C,
-	input L,
-	input S,
+	input EN,
 	output NR,
 	output NG,
 	output NY,
 	output ER,
 	output EG,
-	output EY,
-	output IC
+	output EY
 	);
 
 	wire s_NR;
@@ -31,6 +25,10 @@ module final (
 	wire en_EY;
 	wire [1:0]s_IC;
 	wire en_IC;
+	
+	wire IC;
+	wire rcos;
+	wire rcol;
 
 	wire not_r;
 	wire c_and_l;
@@ -40,8 +38,8 @@ module final (
 	final_datapath datapath(
 		.R (R),
 		.C (C),
-		.S (S),
-		.L (L),
+		.S (rcos),
+		.L (rcol),
 		.clk (clk),
 		.s_NR (s_NR),
 		.en_NR (en_NR),
@@ -90,6 +88,14 @@ module final (
 		.en_EY (en_EY),
 		.s_IC (s_IC),
 		.en_IC (en_IC)
+	);
+
+	counter counter(
+		.clk (clk),
+		.en (EN),
+		.clr (IC),
+		.rcos (rcos),
+		.rcol (rcol)
 	);
 
 endmodule
