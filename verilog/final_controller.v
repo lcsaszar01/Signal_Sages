@@ -33,7 +33,7 @@ module final_controller(
 	always @(posedge clk)
 		state <= next_state;
 
-	always @(*) begin
+	always_ff@(posedge clk) begin
 		s_NR = 0;
 		en_NR = 0;
 		s_NG = 0;
@@ -169,8 +169,7 @@ module final_controller(
 				else
 					next_state = RY;
 			end
-			default: begin
-			end
+			
 		endcase
 	end
 
